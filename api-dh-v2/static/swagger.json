@@ -1,0 +1,1201 @@
+﻿﻿{
+  "openapi": "3.0.0",
+  "info": {
+    "description": "GPA Meu desconto API",
+    "version": "1.0.0",
+    "title": "GPA Meu desconto API",
+    "contact": {
+      "email": "@dunnhumby.com"
+    },
+    "license": {
+      "name": "MIT",
+      "url": "https://opensource.org/licenses/MIT"
+    }
+  },
+  "host": "",
+  "servers": [
+      {
+        "url": "/"
+      }
+    ],
+    "tags": [
+      {
+        "name": "GPA Meu Desconto API",
+        "description": "API utilizada pela plataforma MEU DESCONTO"
+      }
+    ],
+    "paths": {
+      "/getMultipleAudience": {
+        "post": {
+          "tags": [
+              "Obtém audiências sem autenticação"
+          ],
+          "description": "De acordo com os Parâmetros utilizados retorna a audiência ou audiências <br><br> *Parâmetros:* getMultipleAudienceRequestBody<br> Os parâmetros não são todos obrigatórios e afetam o comportamento da API. Os parâmetros estão descritos nos schemas:<br> *Request:* getMultipleAudienceRequestBody <br> *Retorno :* getMultipleAudienceResponse <br>*Retorno de Erro :* getMultipleAudienceErrorResponse",
+          "summary": "Obtém audiência ou audiências calculadas de acordo com os parâmetros utilizados",
+          "requestBody": {
+              "description": "getMultipleAudience Request Object",
+              "required": true,
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/getMultipleAudienceRequestBody"
+                  }
+                }
+              }
+            },
+            "produces": [
+              "application/json"
+            ],
+          "responses": {
+            "200": {
+              "description": "Success",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/getMultipleAudienceResponse"
+                  }
+                }
+              }
+            },
+            "500": {
+              "description": "Error",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/getMultipleAudienceErrorResponse"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "get": {
+          "tags": [
+            "Obtém audiências sem autenticação"
+          ],
+          "description": "De acordo com os parâmetros utilizados retorna a audiência ou audiências <br><br> *Parâmetros:* getMultipleAudienceRequestBody<br> Os parâmetros não são todos obrigatórios e afetam o comportamento da API. Os parâmetros estão descritos nos schemas:<br> *Request:* getMultipleAudienceRequestBody <br> *Retorno :* getMultipleAudienceResponse <br>*Retorno de Erro :* getMultipleAudienceErrorResponse",
+          "summary": "Obtém audiência ou audiências calculadas de acordo com os parâmetros utilizados",
+
+          "requestBody": {
+              "description": "getMultipleAudience Request Object",
+              "required": true,
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/getMultipleAudienceRequestBody"
+                  }
+                }
+              }
+            },
+            "produces": [
+              "application/json"
+            ],
+          "responses": {
+            "200": {
+              "description": "Success",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/getMultipleAudienceResponse"
+                  }
+                }
+              }
+            },
+            "500": {
+              "description": "Error",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/getMultipleAudienceErrorResponse"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "options": {
+          "tags": [
+              "Obtém audiências sem autenticação"
+          ],
+          "description": "De acordo com os parâmetros utilizados retorna a audiência ou audiências <br><br> *Parâmetros:* getMultipleAudienceRequestBody<br> Os parâmetros não são todos obrigatórios e afetam o comportamento da API. Os parâmetros estão descritos nos schemas:<br> *Request:* getMultipleAudienceRequestBody <br> *Retorno :* getMultipleAudienceResponse <br>*Retorno de Erro :* getMultipleAudienceErrorResponse",
+          "summary": "Obtém audiência ou audiências calculadas de acordo com os parâmetros utilizados",
+
+          "requestBody": {
+              "description": "getMultipleAudience Request  Object",
+              "required": true,
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/getMultipleAudienceRequestBody"
+                  }
+                }
+              }
+            },
+            "produces": [
+              "application/json"
+            ],
+          "responses": {
+            "200": {
+              "description": "Success",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/getMultipleAudienceResponse"
+                  }
+                }
+              }
+            },
+            "500": {
+              "description": "Error",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/getMultipleAudienceErrorResponse"
+                  }
+                }
+              }
+            }
+          }
+        }
+
+      },
+      "/getMultipleAudienceAuth": {
+        "post": {
+          "security": [
+            {
+              "api_key": []
+            }
+          ],
+            "tags": [
+              "Obtém audiências com autenticação"
+          ],
+          "description": "De acordo com os parâmetros utilizados retorna a audiência ou audiências <br><br> *Parâmetros:* getMultipleAudienceRequestBody<br> Os parâmetros não são todos obrigatórios e afetam o comportamento da API. Os parâmetros estão descritos nos schemas:<br> *Request:* getMultipleAudienceRequestBody <br> *Retorno :* getMultipleAudienceResponse <br>*Retorno de Erro :* getMultipleAudienceErrorResponse",
+          "summary": "Obtém audiência ou audiências calculadas de acordo com os parâmetros utilizados",
+
+
+          "requestBody": {
+              "description": "getMultipleAudienceAuth Request Post Object",
+              "required": true,
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/getMultipleAudienceRequestBody"
+                  }
+                }
+              }
+            },
+            "produces": [
+              "application/json"
+            ],
+
+          "responses": {
+            "200": {
+              "description": "Success",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/getMultipleAudienceResponse"
+                  }
+                }
+              }
+            },
+            "500": {
+              "description": "Error",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/getMultipleAudienceErrorResponse"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/getReportDataAuth": {
+        "post": {
+          "security": [
+            {
+              "api_key": []
+            }
+          ],
+            "tags": [
+              "Obtém dados para o report"
+          ],
+          "description": "De acordo com os parâmetros utilizados retorna os dados de campanha de acordo com os parâmetros *Parâmetros:* getReportDataAuthBody <br>   *Retorno :* getReportDataAuthResponse <br>*Retorno de Erro :* getReportDataAuthErrorResponse",
+          "summary": "Obtém dados de campanha de acordo com o fornecedor",
+          "requestBody": {
+              "description": "getReportDataAuth Request Post Object",
+              "required": true,
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/getReportDataAuthBody"
+                  }
+                }
+              }
+            },
+            "produces": [
+              "application/json"
+            ],
+
+          "responses": {
+            "200": {
+              "description": "Success",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/getReportDataAuthResponse"
+                  }
+                }
+              }
+            },
+            "500": {
+              "description": "Error",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/getReportDataAuthErrorResponse"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      ,
+      "/getIndicadorAuth": {
+        "post": {
+          "security": [
+            {
+              "api_key": []
+            }
+          ],
+            "tags": [
+              "Obtém dados de indicadores Meu Desconto"
+          ],
+          "description": "Traz dados de indicadores para exibição na pagina inicial do Meu Desconto *Parâmetros:* getReportDataAuthBody <br>   *Retorno :* getIndicadorAuthResponse <br>*Retorno de Erro :* getIndicadorAuthErrorResponse",
+          "summary": "Obtém dados de indicadores do meu desconto, chamada uma vez por semana",
+          "produces": [
+              "application/json"
+            ],
+
+          "responses": {
+            "200": {
+              "description": "Success",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/getIndicadorAuthResponse"
+                  }
+                }
+              }
+            },
+            "500": {
+              "description": "Error",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/getIndicadorAuthErrorResponse"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/getFiltersAuth": {
+        "get": {
+          "tags": [
+              "Obtém filtros sem autenticação"
+          ],
+          "summary": "Busca os filtros no banco de Dados",
+          "description": "Obtém os filtros cadastrados por categoria e unidade de necessidade",
+          "produces": [
+              "application/json"
+          ],
+          "responses": {
+            "200": {
+              "description": "Success",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/getFiltersResponse"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "post": {
+          "tags": [
+              "Obtém Filtros sem autenticação"
+          ],
+          "summary": "Busca os filtros no banco de Dados",
+          "description": "Obtém os filtros cadastrados por categoria e unidade de necessidade",
+          "produces": [
+              "application/json"
+          ],
+
+          "responses": {
+            "200": {
+              "description": "Success",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/getFiltersResponse"
+                  }
+                }
+              }
+            }
+          }
+        }
+
+      }
+
+    },
+
+
+    "components": {
+
+      "securitySchemes":{
+        "api_key":  {
+
+        "type": "http",
+        "scheme": "basic",
+        "name" : "authorization"
+        }
+       },
+      "schemas": {
+          "getMultipleAudienceRequestBody": {
+          "type": "object",
+          "properties": {
+            "audience":
+            {
+              "type": "array",
+              "items":
+                { "$ref": "#/components/schemas/getAudienceBody"}
+            }
+
+          }
+        },
+        "getAudienceBody": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "required": "false",
+              "type": "number",
+              "format": "number"
+            },
+            "modalidade": {
+              
+              "type":"array",
+              "required": "false",
+              "description": "*Filtros necessários para busca de audiência. Pode ser por Categoria,grupo,sub-grupo,familia ou produto.<br> no caso de produto poderá ser enviado uma lista de produtos ", 
+              "$ref": "#/components/schemas/getModalidade"
+
+            
+          }, 
+          "duracao": {
+              "type": "integer",
+              "required": "false",
+              "description": "*Codigo de ciclo de alocação.*<br> 1 - Primeira semana  dias <br> 2 - Segunda Semana <br> 3 - 14 dias "
+          },
+
+          "objetivo": {
+              "type": "string",
+              "required": "false",
+              "description": "*Objetivo da campanha.*<br> Utilizado para calcular a taxa de conversão(coeficiente) caso não exista no arquivo redrates.csv. Também é utilizado filtro<br> valores admitidos:<br> 'frequency': ' is_frequency_increase_candidate  <br>'loyal_a': '  is_loyal_a  <br>'loyal_b': '  is_loyal_b  <br>'ticket': '  is_ticket_increase_candidate  <br> 'penetration':  is_product_increase_candidate_a  <br>'recover':  is_recovery_candidate  <br>'launch':  is_new_product_candidate  '"
+          } ,
+
+          "pFidelidade": {
+              "type": "string",
+              "format": "string",
+              "required": "false",
+              "description": "*Tipo de fidelidade*: Valores admitidos : PA+,PA, EX. O comportamento padrao caso não seja enviado é EX",
+              "enum:": [
+                  "PA",
+                  "EX", "PA+"
+              ]
+          },
+  
+          "unidadesMaxProduto": {
+              "type": "integer",
+              "format": "integer",
+              "required": "false",
+              "description": "*Quantidade de Unidades máximas do produto.*<br> Limita a quantidade de unidades por produto. Os cálculos utilizarão o menor número entre o Parâmetro e configuração de unidades por visita do L20"
+
+          },
+    
+            "mecanica": {
+              "type":"object",
+              "required": "false",
+              "description": "*Dicionário com os tipo de mecânica a ser utilizado*<br> definido no schema getMecanica<br> caso não seja passada a mecânica(ou tipo inexistente) o investimento máximo e faturamento serão considerados ZERO ",
+              "items":{
+              "$ref": "#/components/schemas/getMecanica"
+              }
+            },
+            "regioes": {
+              "type": "array",
+              "required": "false",
+              "description": "*Matriz com as regiões a serem consideradas*. <br> Enviar lista com as siglas dos estados.",
+              "items": {
+                  "type": "string"
+              }
+
+          },
+
+          "filtros": {
+
+                "$ref": "#/components/schemas/getMultipleAudienceRequestFilters"
+
+            }
+
+
+          }
+        },
+        "getModalidade": {
+          "type": "object",
+          "required": "false",
+          "description": "* Dicionário com tipo de oferta a ser realizada *. ",
+          "properties": {
+            "tipotarget": {
+              "required": "true",
+              "description": "* Indica qual o nivel do target que será selecionado. <br> O nivel indicado obrigará o preenchimento do campo correspondente. Tipos Aceitos: <br>PLU              <br>FAMILIA <br>SUB-GRUPO    <br>GRUPO              <br>SUB-CATEGORIA              <br>CATEGORIA",
+
+              "type": "string"
+            },
+              "produto": {
+                "required": "false. Se familia preenchida deve enviar 1 id",
+                "description": "*Matriz com os dos produtos a serem ofertados.Utilizado em oferta por produto e familia",
+                "type": "array",
+                "items": {
+                    "type": "string"
+                  
+                }
+            },
+            "familia": {
+              "required": "false. Se preenchido deve preencher sub-grupo,grupo,sub-categoria,categoria,departamento. obrigatorio para target familia",
+              "description": "* Código da familia a ser ofertada.",
+              "type": "string"
+            },
+            "subgrupo": {
+              "required": "false. Se preenchido deve preencher grupo,sub-categoria,categoria,departamento",
+              "description": "* Código do sub-grupo a ser ofertada.",
+              "type": "string"
+            },
+            "grupo": {
+              "required": "false. Se preenchido deve preencher sub-categoria,categoria,departamento",
+              "description": "* Código do grupo a ser ofertado.",
+              "type": "string"
+            },
+            "subcategoria": {
+              "required": "false. Se preenchido deve preencher categoria,departamento",
+              "description": "* Código da sub-categoria a ser ofertado.",
+              "type": "string"
+            },
+            "categoria": {
+              "required": "false. Se preenchido deve preencher departamento",
+              "description": "* Código da categoria a ser ofertado.",
+              "type": "string"
+            },
+            "departamento": {
+              "required": "True",
+              "description": "* Código departamento.",
+              "type": "string"
+            },
+
+            "vendor_class_code": {
+                "required": "false",
+                "description": "*. Codigo do fabricante  ex:5498  'Schincariol', para GPA Deixar em branco",
+                "type": "string"
+                  
+                },
+            "vendor_code": {
+                "required": "false",
+                "description": "*Código do Distribuidor ex :00000000028067  'HNK BR BEBIDAS LTDA.'. para GPA deixar em branco",
+                "type": "string"
+                  
+                },
+            "bandeira": {
+                  "type": "string",
+                  "format": "string",
+                  "required": "true",
+                  "description": "*Tipo de fidelidade*: Valores admitidos : 'PA+CLEX',PA, EX.",
+                  "enum:": [
+                      "PA",
+                      "EX",
+                      "PA+CLEX"
+                  ]
+              }
+          
+
+            }
+          },
+        "getMecanica": {
+          "type": "object",
+          "required": "false",
+          "description": "*Dicionário com a mecânica*. ",
+          "properties": {
+              "tipoMecanica": {
+                  "required": "true",
+                  "description": "*Tipo de mecânica a ser utilizado*. <br> Os seguintes valores são admitidos:<br> 1. LEVE_X_PAGUE_Y <br> 2. PERCENTUAL_X_NA_Y_UNIDADE<br> 3. PERCENTUAL_X<br> 4. PERCENTUAL<br> 5. ABSOLUTO_X<br> 6. ABSOLUTO ",
+                  "type": "string"
+              },
+              "valorDesconto": {
+                  "required": "false",
+                  "description": "*Valor do desconto para a mecânica.* utilizado nos tipos de mecânica:<br> 3. PERCENTUAL_X<br> 4. PERCENTUAL<br> 5. ABSOLUTO_X<br> 6. ABSOLUTO ",
+                  "type": "number"
+              },
+              "unidadesPagas": {
+                  "required": "false",
+                  "description": "*número de unidades pagas em mecânicas do tipo LEVE X PAGUE Y.* utilizado nos tipos de mecânica:<br> 1. LEVE_X_PAGUE_Y<br> ",
+                  "type": "integer"
+              },
+              "unidadesLevadas": {
+                  "required": "false",
+                  "description": "*número de unidades levadas em mecânicas do tipo LEVE X PAGUE Y.* utilizado nos tipos de mecânica:<br> 1. LEVE_X_PAGUE_Y<br> ",
+                  "type": "integer"
+              },
+              "descontoEmOutraUnidade": {
+                  "required": "false",
+                  "description": "*Desconto em unidades por um certo número de unidades compradas.* utilizado nos tipos de mecanica:<br> 2. PERCENTUAL_X_NA_Y_UNIDADE<br> ",
+                  "type": "number"
+              },
+              "unidade": {
+                  "required": "false",
+                  "description": "*número de unidades compradas a partir do qual o desconto é aplicado.* utilizado nos tipos de mecânica:<br> 2. PERCENTUAL_X_NA_Y_UNIDADE<br> ",
+                  "type": "number"
+              }
+          }
+      } ,
+        "getMultipleAudienceRequestFilters": {
+          "type": "object",
+          "properties": {
+               "genero": {
+                  "required": "false",
+                  "description": "*Matriz com os generos a serem consideradas*. <br> Valores permitidos de M ou F.",
+                  "type": "array",
+                  "items": {
+                      "type": "string",
+                      "enum": ["M","F"]
+                  }
+              },
+              "idade": {
+              "type": "array",
+              "required": "false",
+              "description": "*Matriz com as faixas de idade a serem consideradas*. <br> Valores permitidos de 1 a 6.",
+              "items": {
+                  "type": "integer",
+                  "enum":[1,2,3,4,5,6]
+              }
+          },
+          "lealdadeProduto": {
+              "required": "true",
+              "description": "*Tipo de lealdade utilizado no filtro*: utilizado para realizar filtros de acordo com a lealdade da audiência.<br>Valores admitidos: <br> 1 - Gasta mais com meu produto que com os concorrentes <br> 2 - Gasta mais com produtos do Concorrente do que com meu produto<br> 3 - Compra no L20 mas não meu produto  <br> 4 - Não compra no L20 <br> 5 - Não compra meu produto <br> 6 - Gasta mais com meu produto <br> 7 - Gasta pouco com meu produto <br> 10 - Compra lançamentos e minha categoria<br> 20 - Já comprou mas deixou deixou de comprar nas últimas 13 semanas",
+              "type": "integer"
+            },
+            "sensibilidadePreco": {
+              "required": "false",
+              "description": "*Sensibilidade da audiência ao preço do produto*: utilizado para realizar filtros de acordo com a sensibilidade da audiência.<br>Valores admitidos: <br> 0 - ignora sensibilidade <br> SS - Sensitive segment <br> MM - mid market segment <br> LPS - least price sensitive <br> VPS - Extravangante",
+              "type": "string"
+            },
+            "metodo_envio": {
+              "required": "false",
+              "description": "*Indica o notificação que o cliente aceita para ser notificado *: <br> 0 - realiza filtro por notificação <br> 1 - Se o cliente aceita Push Notification <br>2 - Se o cliente aceita E-mail Marketing <br> 3 - Se cliente aceita Pop-up Inicial",
+              "type": "string"
+            },
+            "operador": {
+              "required": "false",
+              "description": "*Operador lógico utilizado para o filtro de unidades de negocio*: pode ser AND ou OR ",
+              "type": "string"
+            },
+            "operadordna": {
+              "required": "false",
+              "description": "*Operador lógico utilizado para o filtro de unidades de DNA*: pode ser AND ou OR ",
+              "type": "string"
+            },
+            "un":
+            {
+              "type": "array",
+              "description": "*Matriz com as unidades de necessidade a serem utilizadas no filtro",
+              "required": false,
+              "items":
+                {
+                  "$ref": "#/components/schemas/getMultipleAudienceRequestFiltersCodigo"
+                }
+            },
+            "dna":
+            {
+              "type": "array",
+              "description": "*Matriz com DNAs a serem utilizadas no filtro",
+              "required": false,
+              "items": {
+                  "$ref": "#/components/schemas/getMultipleAudienceRequestFiltersCodigo"
+              }
+          }
+          }
+        },
+        "getMultipleAudienceRequestFiltersCodigo": {
+          "type": "object",
+          "properties": {
+            "codigo": {
+              "description": "*código da unidade necessidade ou DNA",
+              "required": true,
+              "type": "integer"
+          },
+            "descricao": {
+              "description": "*descrição da unidade necessidade ou DNA",
+              "required": false,
+              "type": "string"
+          }
+          }
+        },
+        "getMultipleAudienceErrorResponse": {
+          "type": "object",
+          "description": "Ao ocorrer um erro será enviada uma resposta padrão com os seguintes valores : <br>estFaturamento: 0<br> estPublicoAlocado: 0<br> estInvestimentoMaximo: 0<br> valoraudiência: 0<br>qtdMediaCliente: 1.0<br> MinDiscountPercentual: 0<br> MinDiscountAbs: 0<br> MaxDiscountAbs: 0<br>pesoVariavel: false<br> MaxNumberUN: 3<br> MinNumberUN: 1<br>allowUnder18: true ",
+          "properties": {
+            "estFaturamento": {
+              "type": "number",
+              "format": "number"
+            },
+            "estPublicoAlocado": {
+              "type": "number",
+              "format": "number"
+            },
+            "estInvestimentoMaximo": {
+              "type": "number",
+              "format": "number"
+            },
+            "valoraudiência": {
+              "type": "number",
+              "format": "number"
+            },
+            "qtdMediaCliente": {
+              "type": "number",
+              "format": "number"
+            },
+            "MinDiscountPercentual": {
+              "type": "number",
+              "format": "number"
+            },
+            "MinDiscountAbs": {
+              "type": "number",
+              "format": "number"
+            },
+            "MaxDiscountAbs": {
+              "type": "number",
+              "format": "number"
+            },
+            "pesoVariavel": {
+              "type": "boolean",
+              "format": "boolean"
+            },
+            "MaxNumberUN": {
+              "type": "number",
+              "format": "number"
+            },
+            "MinNumberUN": {
+              "type": "number",
+              "format": "number"
+            },
+            "allowUnder18": {
+              "type": "boolean",
+              "format": "boolean"
+            },
+            "pFidelidade": {
+              "type": "boolean",
+              "format": "boolean"
+            },
+
+            "id": {
+              "type": "number",
+              "format": "number"
+            },
+            "Razao": {
+              "type": "string",
+              "format": "string",
+              "description": "*Caso tenha ocorrido algum erro, envia uma mensagem com a razao do ocorrido*: <br> "
+            }
+          }
+        },
+
+        "getFiltersResponse": {
+          "type": "object",
+          "properties": {
+            "categories": {
+              "$ref": "#/components/schemas/getFiltersCategoryResponse"
+            }
+          }
+        },
+        "getFiltersCategoryResponse": {
+          "type": "object",
+          "properties": {
+            "UN": {
+              "description": "Matriz com as unidades de necessidade associadas à categoria",
+              "type": "array",
+              "items":
+                {
+                  "$ref": "#/components/schemas/getFiltersUNResponse"
+                }
+            },
+            "cat_id": {
+              "description": "Código da categoria",
+              "type": "number",
+              "format": "number"
+            },
+            "name": {
+              "description": "Nome da categoria",
+              "type": "string",
+              "format": "string"
+            }
+
+
+          }
+        },
+        "getFiltersUNResponse": {
+          "type": "object",
+          "description": "Nome da categoria",
+          "properties": {
+            "un_code": {
+              "description":"Código da unidade de necessidade",
+              "type": "number",
+              "format": "number"
+            },
+            "un_level": {
+              "description": "Nível da unidade de necessidade",
+              "type": "number",
+              "format": "number"
+            },
+            "un_name": {
+              "description": "Nome da unidade de necessidade",
+              "type": "string",
+              "format": "string"
+            }
+          }
+        },
+
+
+        "getMultipleAudienceResponse": {
+          "type": "object",
+          "description": "*Resposta do método getMultipleAudience*. ",
+          "properties": {
+            "estFaturamento": {
+              "type": "number",
+              "format": "number",
+              "description": "*Valor calculado*: Fórmula: (preco do produto - Desconto por unidade) * estimativa publico alocado * quantidade média de unidades<br> para os tipos de mecanica PERCENTUAL_X_NA_Y_UNIDADE,LEVE_X_PAGUE_Y o formula é: <br>(preco do produto - Desconto por unidade) * estimativa publico alocado * (quantidade média de unidades/número de unidades)"
+          },
+            "estPublicoAlocado": {
+              "type": "number",
+              "format": "number",
+              "description": "*Valor calculado*: valoraudiência * coeficiente<br> o coeficiente é taxa de conversão do csv redrates.utilizand os filtros pfidelidade, aba, level_code, L20_code ou L21_code. caso não encontre utiliza a tabela abaixo dependendo do objetivo.<br>'frequency': se pFidelidade = 'PA'  0.0116 senão 0.0073<br>'loyal_a': se pFidelidade = 'PA' 0.0116 senão 0.0073<br>'loyal_b': se pFidelidade = 'PA' 0.0116 senão 0.0073 'ticket': se pFidelidade = 'PA' 0.0116 senão 0.0073<br>'penetration': 0.0010<br> 'recover': 0.0010<br> 'launch': 0.0010 <br> <h4> caso o objetivo não tenha sido passado o coeficiente será se pFidelidade = 'PA' 0.0116 senão 0.0073 </h4>"
+          },
+            "estInvestimentoMaximo": {
+              "type": "number",
+              "format": "number",
+              "description": "*Valor Calculado:*  Formula: Desconto por unidade x estimativa publico alocado x quantidade média de unidades<br> para os tipos de mecanica PERCENTUAL_X_NA_Y_UNIDADE,LEVE_X_PAGUE_Y o formula é: <br> Desconto por unidade * estimativa publico alocado * (quantidade média de unidades/número de unidades)"
+          },
+            "valoraudiência": {
+              "type": "number",
+              "format": "number",
+              "description": "*Retorna contagem do cubo de audiência de acordo com os Parâmetros passados para a API*"
+          },
+            "qtdMediaCliente": {
+              "type": "number",
+              "format": "number",
+              "description": "*Quantidade média do produto comprado por visita.:* Retorna o valor cadastrado para o produto ou L20 na tabela index_l21. "
+          },
+            "MinDiscountPercentual": {
+              "type": "number",
+              "format": "number",
+              "description": "*Percentual do valor minimo de desconto.:* Retorna o valor cadastrado para o produto ou L20 na tabela index_l21. "
+          },
+            "MinDiscountAbs": {
+              "type": "number",
+              "format": "number",
+              "description": "*Valor mínimo do desconto. Calculado a partir o do preço e percentual mínimo de desconto*. "
+          },
+            "MaxDiscountAbs": {
+              "type": "number",
+              "format": "number",
+              "description": "*Valor máximo do desconto. 50% do preço do produto*. "
+          },
+            "pesoVariavel": {
+              "type": "boolean",
+              "format": "boolean",
+              "description": "*Flag que indica se o produto tem peso variavel. Retorna true ou false*. "
+          },
+            "MaxNumberUN": {
+              "type": "number",
+              "format": "number",
+              "description": "*Valor máximo de unidades de necessidade. Configurado para retornar sempre 3*. "
+          },
+            "MinNumberUN": {
+              "type": "number",
+              "format": "number",
+              "description": "*Valor mínimo de unidades de necessidade. Configurado para retornar sempre 1*. "
+          },
+            "allowUnder18": {
+              "type": "boolean",
+              "format": "boolean",
+              "description": "*Retorna se o produto é permitido para menores de 18 anos. Se o produto ou l20 for alcool retorna false, caso contrário true* "
+
+            },
+            "pFidelidade": {
+              "type": "boolean",
+              "format": "boolean",
+              "description": "*Tipo de fidelidade passado como parâmetro*: Valores admitidos : PA, EX, PA+",
+              "enum:":["PA","EX","PA+"]
+          },
+
+            "id": {
+              "type": "number",
+              "format": "number",
+              "description": "*Retorna o campo id caso tenha sido passado como parâmetro* "
+          },
+          "Razao": {
+              "type": "string",
+              "format": "string",
+              "description": "*Caso tenha ocorrido algum erro, envia uma mensagem com a razao do ocorrido* <br> se o produto e l20 não estiver carregado nos cubos envia a seguinte mensagem:<br> Produto ({0}) e l20 ({1}) nao encontrados! "
+          }
+
+          }
+        },
+        "getReportDataAuthBody": {
+          "type": "object",
+          "description": "",
+          "properties": {
+            "vendor_class_code": {
+              "required": "false",
+              "description": "*. Codigo do fabricante  ex:5498  'Schincariol', para GPA Deixar em branco",
+              "type": "string"
+                
+              },
+          "vendor_code": {
+              "required": "false",
+              "description": "*Código do Distribuidor ex :00000000028067  'HNK BR BEBIDAS LTDA.'. para GPA deixar em branco",
+              "type": "string"
+                
+              },
+          "regioes": {
+                "type": "array",
+                "required": "false",
+                "description": "*Matriz com as regiões a serem consideradas*. <br> Enviar lista com as siglas dos estados.",
+                "items": {
+                    "type": "string"
+                }  
+          },
+          "bandeira": {
+            "type": "string",
+            "format": "string",
+            "required": "false",
+            "description": "*Tipo de fidelidade*: Valores admitidos :PA, EX. O comportamento padrao caso não seja enviado é cálculo para as duas bandeiras juntas",
+            "enum:": [
+                "PA",
+                "EX"
+            ]
+          }
+        }
+      },
+
+        "getIndicadorAuthResponse": {
+          "type": "object",
+          "description": "",
+          "properties": {
+            "Plataforma": {
+              "type": "array",
+              "required": "false",
+              "items": {
+                "$ref": "#/components/schemas/getIndicadorPlataformaDataResponse"
+              }  
+            },
+            "Industria": {
+              "type": "array",
+              "required": "false",
+              "items": {
+                "$ref": "#/components/schemas/getIndicadorIndustriaDataResponse"
+              }  
+            }
+          }
+        }
+        ,
+        "getIndicadorPlataformaDataResponse": {
+          "type": "object",
+          "description": "",
+          "properties": {
+            "bandeira": {
+              "type": "string"
+            },
+            "ofertaAtivadas": {
+              "type": "number"
+            },
+            "clientesComprando": {
+              "type": "number"
+            },
+            "vendas": {
+              "type": "number"
+            }
+          
+          }
+        },
+        "getIndicadorIndustriaDataResponse": {
+          "type": "object",
+          "description": "",
+          "properties": {
+            "bandeira": {
+              "type": "string"
+            },
+            "vendor_code": {
+              "type": "string"
+            },
+            "vendor_class_code": {
+              "type": "string"
+            },
+            "ofertaAtivadas": {
+              "type": "number"
+            },
+            "clientesComprando": {
+              "type": "number"
+            },
+            "clientesUnicos": {
+              "type": "number"
+            },
+            "vendas": {
+              "type": "number"
+            }
+          
+          }
+        },
+        
+        "getReportDataAuthResponse": {
+          "type": "object",
+          "description": "",
+          "properties": {
+            "fornecedor": {
+              "type": "array",
+              "required": "false",              
+              "items": {
+                "$ref": "#/components/schemas/getReportFornecedorDataResponse"
+              }  
+            }
+          }
+        },
+        "getReportFornecedorDataResponse": {
+          "type": "object",
+          "description": "",
+          "properties": {
+            "nome": {
+              "type": "string"
+            },
+            "dados":
+            {
+              "$ref": "#/components/schemas/getReportDataResponse"
+            }
+          }
+        },
+
+        "getinformacoesgeraisResponse": {
+          "type": "object",
+          "description": "",
+          "properties": {
+            "totalportifolio": {
+              "type": "number",
+              "format": "number"
+            },
+            "participacao": {
+              "type": "number",
+              "format": "number"
+            },
+            "produtosmeudesconto": {
+              "type": "number",
+              "format": "number"
+            }
+          }
+      },
+      "getfunilResponse": {
+        "type": "object",
+        "description": "",
+        "properties": {
+          "clientesalocados": {
+            "type": "number",
+            "format": "number"
+          },
+          "ofertasativadas": {
+            "type": "number",
+            "format": "number"
+          },
+          "ofertascompradas": {
+            "type": "number",
+            "format": "number"
+          }
+        }
+      },
+      "getvendasindustriaResponse": {
+        "type": "array",
+        "required": "false",
+        "items": {
+          "$ref": "#/components/schemas/getvenda"
+        }  
+
+      },
+      "getvenda": {
+        "type": "object",
+        "description": "",
+        "properties": {
+          "mesano": {
+            "type": "string",
+            "format": "string"
+          },
+          "totalvendas": {
+            "type": "number",
+            "format": "number"
+          }
+        }
+      },
+    "getciclo": {
+        "type": "object",
+        "description": "",
+        "properties": {
+          "ciclo": {
+            "type": "string",
+            "format": "string"
+          },
+          "totalvendas": {
+            "type": "number",
+            "format": "number"
+          }
+        }
+      },
+
+      "getsharevendasResponse": {
+        "type": "object",
+        "description": "",
+        "properties": {
+          "vendasmeudesconto": {
+            "type": "number",
+            "format": "number"
+          },
+          "totalvendas": {
+            "type": "number",
+            "format": "number"
+          },          
+          "sharevendas": {
+            "type": "number",
+            "format": "number"
+          }
+        }
+      },
+      "getciclosinfoResponse": {
+        "type": "object",
+        "description": "",
+        "properties": {
+          "ultimaonda": {
+            "type": "string",
+            "format": "string"
+          },
+          "ultimaparticipacao": {
+            "type": "string",
+            "format": "string"
+          },          
+          "primeiraparticipacao": {
+            "type": "string",
+            "format": "string"
+          },
+          "numeroparticipacoes": {
+            "type": "number",
+            "format": "number"
+          }
+        }
+      },
+      "getultimosciclosResponse": {
+        "type": "array",
+        "required": "false",
+        "items": {
+          "$ref": "#/components/schemas/getciclo"
+        }  
+
+      },
+      "gettopciclosResponse": {
+        "type": "array",
+        "required": "false",
+        "items": {
+          "$ref": "#/components/schemas/getciclo"
+        }  
+
+      },
+
+      "getclientesResponse": {
+        "type": "object",
+        "description": "",
+        "properties": {
+          "clientescategoria": {
+            "type": "string",
+            "format": "string"
+          },
+          "categoria": {
+            "type": "string",
+            "format": "string"
+          },
+          "seusclientes": {
+            "type": "number",
+            "format": "number"
+          },          
+          "clientescategoriameudesconto": {
+            "type": "number",
+            "format": "number"
+          },
+          "seusclientescategoriameudesconto": {
+            "type": "number",
+            "format": "number"
+          }
+        }    
+
+      },
+      "getReportDataAuthErrorResponse": {
+          "type": "object",
+          "description": "",
+          "properties": {
+            "Razao": {
+              "type": "string",
+              "description":"* motivo do erro *"
+            }
+          }
+        },
+      "getReportDataResponse": {
+          "type": "object",
+          "description": "",
+          "properties": {
+            "informacoesgerais": {
+              "$ref": "#/components/schemas/getinformacoesgeraisResponse"
+            },
+            "funil": {
+              "$ref": "#/components/schemas/getfunilResponse"
+            },
+            "vendasindustria": {
+              "$ref": "#/components/schemas/getvendasindustriaResponse"
+            },
+            "sharevendas": {
+              "$ref": "#/components/schemas/getsharevendasResponse"
+            },
+            "ciclos": {
+              "$ref": "#/components/schemas/getciclosinfoResponse"
+            },
+            "ultimosciclos": {
+              "$ref": "#/components/schemas/getultimosciclosResponse"
+            },
+            "topciclos": {
+              "$ref": "#/components/schemas/gettopciclosResponse"
+            },
+            "clientes": {
+              "$ref": "#/components/schemas/getclientesResponse"
+            }
+          }
+        }
+
+
+
+      }
+    }
+
+
+}
