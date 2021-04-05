@@ -1,4 +1,4 @@
-Executar o comando dentro do diretório "Docker"
+Executar o comando dentro do diretório "Docker" - teste01
 
 <Comando para criar a imagem>
 docker build -t docker_dh_image .
