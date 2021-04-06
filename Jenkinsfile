@@ -7,7 +7,6 @@ pipeline {
               git url: 'https://github.com/jpmarcio/gpa-industry-audience.git/'
            }
         }
-
         stage('Building image') {
            steps{
               script {
