@@ -17,7 +17,7 @@ pipeline {
         stage('Deploy image') {
            steps{
               script {
-                 sh "ls -l"
+                 sh "docker run -it d0c534de2c18 /bin/sh"
                  sh "cd api-dh-v2"
                  sh "sh meudesconto_api.sh status dev"
 //                  sh "sh api-dh-v2/meudesconto_api.sh status dev"
