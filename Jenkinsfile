@@ -1,6 +1,5 @@
 pipeline {
     agent any
-
     stages {
         stage('Cloning Git') {
            steps {
@@ -13,6 +12,11 @@ pipeline {
                  sh "docker build -t gpa-industry-audience ."
               }
            }
+        }
+        stage('Final Stage'){
+            steps{
+                echo "Deu tudo certo!!!"
+            }
         }
     }
 }
