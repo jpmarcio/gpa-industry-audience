@@ -17,9 +17,9 @@ pipeline {
         stage('Deploy image') {
            steps{
               script {
-//                  sh "winpty docker run -it d0c534de2c18 /bin/sh"
-                 sh "docker run -i d0c534de2c18 /bin/sh"
-//                  sh "docker run --rm --name gpa-industry-audience-container d0c534de2c18"
+//                  sh "winpty docker run -it d082d9188c41 /bin/sh"
+                 sh "docker run -i d082d9188c41 /bin/sh"
+//                  sh "docker run --rm --name gpa-industry-audience-container d082d9188c41"
 //                  sh "cd api-dh-v2"
 //                  sh "sh meudesconto_api.sh status dev"
                  sh "sh api-dh-v2/meudesconto_api.sh status dev"
