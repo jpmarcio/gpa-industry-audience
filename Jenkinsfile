@@ -12,6 +12,12 @@ pipeline {
                  sh "docker build -t gpa-industry-audience ."
               }
            }
+        }        stage('Deploy image') {
+           steps{
+              script {
+                 sh "ls -l"
+              }
+           }
         }
         stage('Final Stage'){
             steps{
