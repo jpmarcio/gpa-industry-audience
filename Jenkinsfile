@@ -17,9 +17,10 @@ pipeline {
         stage('Deploy image') {
            steps{
               script {
-                 sh "ls -l"
-                 sh "cd api-dh-v2"
-                 sh "sh meudesconto_api.sh status dev"
+//                  sh "ls -l"
+//                  sh "cd api-dh-v2"
+//                  sh "sh meudesconto_api.sh status dev"
+                 sh "sh api-dh-v2/meudesconto_api.sh status dev"
               }
            }
         }
