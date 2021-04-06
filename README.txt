@@ -8,6 +8,8 @@ docker images
 ---------------------------------------------------------
 <Comando para rodar e entrar no container da imagem>
 docker run -it 11821a430bc6 /bin/sh
+
+a62d5c1e25a2
 ---------------------------------------------------------
 Dentro do container
 <Comando para entrar no diretório da aplicação>
