@@ -12,7 +12,6 @@ pipeline {
            steps{
               script {
                  sh "docker build -t gpa-industry-audience ."
-                 sh "docker run -p 9999:9999 --name gpa-industry-audience -d gpa-industry-audience "
               }
            }
         }
