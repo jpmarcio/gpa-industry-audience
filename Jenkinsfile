@@ -9,10 +9,11 @@ pipeline {
         stage('Building image') {
            steps{
               script {
-                 sh "docker build -t gpa-industry-audience ."
+                 sh "docker build -t "re037737/gpa-industry-audience ."
               }
            }
-        }        stage('Deploy image') {
+        }
+        stage('Deploy image') {
            steps{
               script {
                  sh "ls -l"
