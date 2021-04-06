@@ -18,7 +18,7 @@ pipeline {
            steps{
               script {
 //                  sh "winpty docker run -it d082d9188c41 /bin/sh"
-                 sh "docker run -i d082d9188c41 /bin/sh"
+                 sh "winpty docker exec -it d082d9188c41 sh"
 //                  sh "docker run --rm --name gpa-industry-audience-container d082d9188c41"
 //                  sh "cd api-dh-v2"
 //                  sh "sh meudesconto_api.sh status dev"
