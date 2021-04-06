@@ -18,6 +18,8 @@ pipeline {
            steps{
               script {
                  sh "ls -l"
+                 sh "cd api-dh-v2"
+                 sh "sh meudesconto_api.sh status dev"
               }
            }
         }
